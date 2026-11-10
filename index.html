@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Навчальний проєкт: Giftly, Київ, 2026 -->
+  <meta name="theme-color" content="#f8f3ef">
+  <meta name="description" content="Giftly — персоналізовані подарункові бокси. Розкажіть нам про людину — ми підберемо подарунок.">
+  <title>Giftly — подарунок, який розуміє</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Головна навігація та каталог Giftly -->
+  <div class="announcement" data-i18n="announcement">Подарунок, у якому є увага до деталей ✦ Доставка по Україні</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Giftly home">
+      <span class="brand-mark">g</span><span>giftly<span class="brand-dot">.</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню">☰</button>
+    <nav id="mainNav">
+      <a href="#catalog" data-i18n="navCatalog">Каталог</a>
+      <a href="#how" data-i18n="navHow">Як це працює</a>
+      <a href="#about" data-i18n="navAbout">Про нас</a>
+      <a href="#reviews" data-i18n="navReviews">Відгуки</a>
+      <a href="#contacts" data-i18n="navContacts">Контакти</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-switch" id="langSwitch" aria-label="Switch language">EN</button>
+      <button class="cart-button" id="cartOpen"><span data-i18n="cart">Кошик</span><span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">THE ART OF GIVING</p>
+        <h1 data-i18n="heroTitle">Подарунок, який<br><em>розуміє</em> людину.</h1>
+        <p class="hero-text" data-i18n="heroText">Розкажіть нам про того, кого хочете потішити, — ми створимо персоналізований бокс, у якому кожна деталь має значення.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#catalog" data-i18n="heroCta">Обрати подарунок <span>↗</span></a>
+          <a class="text-link" href="#how" data-i18n="heroSecondary">Як це працює</a>
+        </div>
+        <div class="hero-note"><span class="note-star">✳</span><span data-i18n="heroNote">Створено з турботою. Підібрано саме для них.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image"></div>
+        <div class="floating-card"><span class="floating-icon">♡</span><span data-i18n="floatingText">Особливе —<br>у кожній деталі</span></div>
+        <div class="image-caption">GIFTING, MADE PERSONAL</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>01</strong><span data-i18n="trust1">Підбір за інтересами</span></div>
+      <div><strong>02</strong><span data-i18n="trust2">Три зручні бюджети</span></div>
+      <div><strong>03</strong><span data-i18n="trust3">Доставка по Україні</span></div>
+      <div><strong>04</strong><span data-i18n="trust4">Турботливе пакування</span></div>
+    </section>
+
+    <section class="section catalog-section" id="catalog">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="catalogEyebrow">THE GIFT EDIT</p><h2 data-i18n="catalogTitle">Знайдіть свій <em>формат</em></h2></div>
+        <p data-i18n="catalogIntro">Три розміри, безліч способів сказати «я про тебе подумав». Наповнення підбираємо відповідно до анкети та побажань.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image product-s"><span class="product-tag">01 / SMALL</span><button class="quick-add" data-add="S" aria-label="Додати Giftly S">+</button></div>
+          <div class="product-meta"><div><h3>Giftly S</h3><p data-i18n="productS">Маленький знак великої уваги</p></div><strong>999 ₴</strong></div>
+          <button class="outline-button full" data-add="S" data-i18n="addToCart">Додати до кошика</button>
+        </article>
+        <article class="product-card featured-product">
+          <div class="product-image product-m"><span class="product-tag">02 / MEDIUM</span><span class="best-seller" data-i18n="bestseller">Бестселер</span><button class="quick-add" data-add="M" aria-label="Додати Giftly M">+</button></div>
+          <div class="product-meta"><div><h3>Giftly M</h3><p data-i18n="productM">Той самий особливий баланс</p></div><strong>1 599 ₴</strong></div>
+          <button class="button button-dark full" data-add="M" data-i18n="addToCart">Додати до кошика</button>
+        </article>
+        <article class="product-card">
+          <div class="product-image product-l"><span class="product-tag">03 / LARGE</span><button class="quick-add" data-add="L" aria-label="Додати Giftly L">+</button></div>
+          <div class="product-meta"><div><h3>Giftly L</h3><p data-i18n="productL">Більше простору для вражень</p></div><strong>2 499 ₴</strong></div>
+          <button class="outline-button full" data-add="L" data-i18n="addToCart">Додати до кошика</button>
+        </article>
+      </div>
+      <p class="catalog-footnote" data-i18n="catalogFootnote">* Фінальне наповнення залежить від анкети отримувача, доступності товарів і погоджених побажань.</p>
+    </section>
+
+    <section class="personal-section" id="how">
+      <div class="personal-image"></div>
+      <div class="personal-copy">
+        <p class="eyebrow" data-i18n="personalEyebrow">NOT JUST A BOX</p>
+        <h2 data-i18n="personalTitle">Не потрібно вгадувати.<br><em>Ми допоможемо.</em></h2>
+        <p data-i18n="personalText">Ви знаєте людину, але не знаєте, що подарувати? Поділіться кількома деталями — ми використаємо їх як орієнтир для персонального підбору.</p>
+        <div class="steps">
+          <div><span>01</span><p data-i18n="step1">Оберіть бюджет подарунка</p></div>
+          <div><span>02</span><p data-i18n="step2">Розкажіть про отримувача</p></div>
+          <div><span>03</span><p data-i18n="step3">Ми підберемо та оформимо бокс</p></div>
+        </div>
+        <button class="button button-dark" id="quizOpen" data-i18n="quizCta">Заповнити анкету <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="quote-section" id="about">
+      <p class="eyebrow" data-i18n="quoteEyebrow">A LITTLE MORE THOUGHTFUL</p>
+      <blockquote data-i18n="quote">«Найкращий подарунок — не найдорожчий. А той, у якому людина впізнає себе».</blockquote>
+      <p class="quote-signature">The Giftly philosophy</p>
+    </section>
+
+    <section class="values-section">
+      <div class="section-heading compact"><div><p class="eyebrow" data-i18n="valuesEyebrow">THE GIFTLY DIFFERENCE</p><h2 data-i18n="valuesTitle">Продумано до <em>дрібниць</em></h2></div></div>
+      <div class="values-grid">
+        <div class="value"><span>✳</span><h3 data-i18n="value1Title">Персональний підхід</h3><p data-i18n="value1Text">Враховуємо інтереси, стиль, привід і ваш бюджет.</p></div>
+        <div class="value"><span>◇</span><h3 data-i18n="value2Title">Гармонійне наповнення</h3><p data-i18n="value2Text">Поєднуємо речі, які разом створюють цілісне враження.</p></div>
+        <div class="value"><span>♡</span><h3 data-i18n="value3Title">Естетика пакування</h3><p data-i18n="value3Text">Подарунок має бути особливим ще до того, як його відкриють.</p></div>
+        <div class="value"><span>↗</span><h3 data-i18n="value4Title">Зручно від початку</h3><p data-i18n="value4Text">Від вибору до доставки — зрозумілий шлях онлайн.</p></div>
+      </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="reviewsEyebrow">KIND WORDS</p><h2 data-i18n="reviewsTitle">Теплі слова — <em>найкраща подяка</em></h2></div><p class="review-disclaimer" data-i18n="reviewDisclaimer">Відгуки нижче — демонстраційні приклади оформлення. Замініть їх реальними відгуками після перших замовлень.</p></div>
+      <div class="review-grid">
+        <article class="review"><div class="stars">★★★★★</div><p data-i18n="review1">«Дуже сподобалося, що не потрібно самостійно шукати кожну дрібницю. Вийшов цілісний подарунок».</p><span>— Марія, Київ</span></article>
+        <article class="review"><div class="stars">★★★★★</div><p data-i18n="review2">«Анкета — це суперідея. Хотілося зробити сюрприз, і підбір допоміг визначитися».</p><span>— Анна, Львів</span></article>
+        <article class="review"><div class="stars">★★★★★</div><p data-i18n="review3">«Окреме задоволення — пакування. Відчувається увага до деталей».</p><span>— Олена, Київ</span></article>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div><p class="eyebrow" data-i18n="ctaEyebrow">MAKE SOMEONE'S DAY</p><h2 data-i18n="ctaTitle">Почнімо з думки<br>про <em>особливу людину.</em></h2></div>
+      <a class="button button-light" href="#catalog" data-i18n="ctaButton">Обрати Giftly <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div class="footer-main">
+      <div class="footer-brand"><a class="brand brand-footer" href="#home"><span class="brand-mark">g</span><span>giftly<span class="brand-dot">.</span></span></a><p data-i18n="footerTagline">Персоналізовані подарунки, створені з увагою до людини.</p></div>
+      <div><h4 data-i18n="footerExplore">Досліджуйте</h4><a href="#catalog" data-i18n="navCatalog">Каталог</a><a href="#how" data-i18n="navHow">Як це працює</a><a href="#about" data-i18n="navAbout">Про нас</a></div>
+      <div><h4 data-i18n="footerHelp">Допомога</h4><a href="#contacts" data-i18n="delivery">Доставка й оплата</a><a href="mailto:k.delasa_femp_16_24_b_d@knute.edu.ua" data-i18n="contactUs">Написати нам</a><a href="#contacts">Instagram · TikTok</a></div>
+      <div><h4 data-i18n="footerContact">Контакти</h4><p>Київ, Україна</p><a href="mailto:k.delasa_femp_16_24_b_d@knute.edu.ua">k.delasa_femp_16_24_b_d@knute.edu.ua</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Катерина Деласа. Усі права захищені.</span>
+      <span>Website developed by Kateryna Delasa</span>
+      <span>k.delasa_femp_16_24_b_d@knute.edu.ua</span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h2 data-i18n="cartTitle">Ваш кошик</h2><button class="close-button" id="cartClose">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart" data-i18n="emptyCart">Поки що тут порожньо.</p></div>
+    <div class="cart-total"><span data-i18n="total">Разом</span><strong id="cartTotal">0 ₴</strong></div>
+    <button class="button button-dark full" id="checkoutOpen" data-i18n="checkout">Перейти до оформлення</button>
+    <p class="tiny-note" data-i18n="shippingNote">Доставка Новою поштою оплачується окремо отримувачем/покупцем.</p>
+  </aside>
+
+  <div class="modal" id="quizModal">
+    <div class="modal-card">
+      <button class="close-button modal-close" data-close="quizModal">×</button>
+      <p class="eyebrow" data-i18n="quizEyebrow">A FEW LITTLE DETAILS</p><h2 data-i18n="quizTitle">Розкажіть нам про <em>отримувача</em></h2>
+      <form id="quizForm" class="stack-form">
+        <label><span data-i18n="recipientAge">Вік отримувача</span><input name="age" type="text" placeholder="Наприклад, 27" required></label>
+        <label><span data-i18n="occasion">Привід</span><select name="occasion"><option value="День народження">День народження</option><option value="Річниця">Річниця</option><option value="Подяка">Подяка</option><option value="Без приводу">Без приводу</option><option value="Інше">Інше</option></select></label>
+        <label><span data-i18n="interests">Інтереси та захоплення</span><textarea name="interests" rows="3" placeholder="Кава, книги, подорожі..." required></textarea></label>
+        <label><span data-i18n="style">Стиль / побажання</span><input name="style" placeholder="Мінімалізм, затишок, яскраві кольори..."></label>
+        <label><span data-i18n="avoid">Чого краще уникати?</span><input name="avoid" placeholder="Категорії, аромати, кольори..."></label>
+        <label><span data-i18n="budget">Бажаний бюджет</span><select name="budget"><option>Giftly S — 999 ₴</option><option selected>Giftly M — 1 599 ₴</option><option>Giftly L — 2 499 ₴</option></select></label>
+        <button class="button button-dark full" type="submit" data-i18n="sendQuiz">Надіслати побажання</button>
+      </form>
+      <p class="tiny-note" data-i18n="quizPrivacy">Не вказуйте чутливу або зайву персональну інформацію. Анкета зараз демонстраційна і не надсилає дані на сервер.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-card">
+      <button class="close-button modal-close" data-close="checkoutModal">×</button>
+      <p class="eyebrow" data-i18n="checkoutEyebrow">ALMOST YOURS</p><h2 data-i18n="checkoutTitle">Оформлення <em>замовлення</em></h2>
+      <form id="checkoutForm" class="stack-form">
+        <label><span data-i18n="fullName">Ім’я та прізвище</span><input name="name" required autocomplete="name"></label>
+        <label><span data-i18n="phone">Номер телефону</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380..."></label>
+        <label><span data-i18n="email">Електронна пошта</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span data-i18n="deliveryAddress">Місто та відділення Нової пошти</span><input name="address" required placeholder="Київ, відділення №..."></label>
+        <label><span data-i18n="personalNote">Побажання до замовлення</span><textarea name="note" rows="2"></textarea></label>
+        <div class="checkout-total"><span data-i18n="total">Разом</span><strong id="checkoutTotal">0 ₴</strong></div>
+        <button class="button button-dark full" type="submit" data-i18n="payButton">Перейти до оплати WayForPay</button>
+        <p id="checkoutMessage" class="form-message" role="status"></p>
+      </form>
+      <p class="tiny-note" data-i18n="checkoutNote">Оплата активується після налаштування облікового запису мерчанта WayForPay та серверних ключів.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
